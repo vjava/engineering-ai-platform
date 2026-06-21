@@ -20,7 +20,15 @@ options {
 }
 
 stages {
-
+	stage('Environment') {
+		steps {
+			sh '''
+			which python || true
+			which python3 || true
+			java -version
+			'''
+		}
+	}
     stage('Checkout') {
 
         steps {
