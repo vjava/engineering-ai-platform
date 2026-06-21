@@ -60,7 +60,7 @@ stages {
 
             sh '''
             python --version
-            pip install -r requirements.txt
+            pip3 --version || true
             '''
         }
     }
