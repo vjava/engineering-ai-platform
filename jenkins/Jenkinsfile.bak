@@ -54,17 +54,6 @@ stages {
         }
     }
 
-    stage('Install Dependencies') {
-
-        steps {
-
-            sh '''
-            python --version
-            pip3 --version
-            '''
-        }
-    }
-
     stage('Run Unit Tests') {
 
         steps {
