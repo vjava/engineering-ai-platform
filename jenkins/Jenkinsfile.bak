@@ -60,7 +60,7 @@ stages {
 
             sh '''
             python --version
-            pip3 --version || true
+            pip3 --version
             '''
         }
     }
