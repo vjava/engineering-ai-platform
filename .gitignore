@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+
+.env
+
+reports/*.html
+reports/*.pdf
+
+chromadb/
+mlruns/
+
+.idea/
+.vscode/

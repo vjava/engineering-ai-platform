@@ -1,0 +1,7 @@
+
+pipeline {
+ agent any
+ stages {
+   stage('Trigger'){ steps { echo 'Run Databricks Pipeline' } }
+ }
+}
