@@ -1,6 +1,5 @@
 pipeline {
 
-```
 agent any
 
 environment {
@@ -156,6 +155,5 @@ post {
         echo "FAILED"
     }
 }
-```
 
 }
