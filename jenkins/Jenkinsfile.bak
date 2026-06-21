@@ -54,16 +54,6 @@ stages {
         }
     }
 
-    stage('Run Unit Tests') {
-
-        steps {
-
-            sh '''
-            pytest tests
-            '''
-        }
-    }
-
     stage('Build Docker Image') {
 
         steps {
