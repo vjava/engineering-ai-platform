@@ -29,7 +29,7 @@ stages {
 
             checkout scm
 
-            bat 'git status'
+            sh 'git status'
         }
     }
 
@@ -39,7 +39,7 @@ stages {
 
             echo "Validate Project Structure"
 
-            bat '''
+            sh '''
             dir
             '''
 
@@ -50,7 +50,7 @@ stages {
 
         steps {
 
-            bat '''
+            sh '''
             python --version
             pip install -r requirements.txt
             '''
@@ -61,7 +61,7 @@ stages {
 
         steps {
 
-            bat '''
+            sh '''
             pytest tests
             '''
         }
@@ -71,7 +71,7 @@ stages {
 
         steps {
 
-            bat """
+            sh """
             docker build ^
               -t %IMAGE_NAME%:%IMAGE_TAG% ^
               .
@@ -83,7 +83,7 @@ stages {
 
         steps {
 
-            bat '''
+            sh '''
             databricks workspace import-dir ^
               notebooks ^
               /EngineeringAI ^
@@ -96,7 +96,7 @@ stages {
 
         steps {
 
-            bat """
+            sh """
             databricks jobs run-now ^
                 ${JOB_ID}
             """
@@ -120,7 +120,7 @@ stages {
 
         steps {
 
-            bat '''
+            sh '''
             mkdir reports
             '''
         }

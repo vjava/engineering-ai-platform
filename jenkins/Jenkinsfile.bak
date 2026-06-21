@@ -4,8 +4,8 @@ agent any
 
 environment {
 
-    DATABRICKS_HOST = credentials('databricks-host')
-    DATABRICKS_TOKEN = credentials('databricks-token')
+    DATABRICKS_HOST = credentials('DATABRICKS_HOST')
+    DATABRICKS_TOKEN = credentials('DATABRICKS_TOKEN')
 
     JOB_ID = "123456789"
 
